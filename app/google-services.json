@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "220507703080",
+    "firebase_url": "https://ybo-seller.firebaseio.com",
+    "project_id": "ybo-seller",
+    "storage_bucket": "ybo-seller.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:220507703080:android:ad2602c7c53c230fd4b21d",
+        "android_client_info": {
+          "package_name": "com.techcamino.mlm.yboseller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "220507703080-9uoasna3dsfgq8t99qrmf4k76p9c0f8v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techcamino.mlm.yboseller",
+            "certificate_hash": "4614b6fbc380467f9072e495fab26cf49b459867"
+          }
+        },
+        {
+          "client_id": "220507703080-qae95o7j3642k56mkd5skhm0ohi01bp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsOEXCvSmfAwAMzYwYAzA7R3yJehwMBtc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "220507703080-qae95o7j3642k56mkd5skhm0ohi01bp7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

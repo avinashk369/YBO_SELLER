@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="yellow_dark">#F8BD33</color>
+    <color name="yellow">#FAD416</color>
+    <color name="blue_light_tp">#6688D9F7</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="blue_sky">#33b5e5</color>
+    <color name="blue_light">#88D9F7</color>
+    <color name="grey">#D6D9DA</color>
+    <color name="warm_grey">#7f7f7f</color>
+    <color name="warm_grey_four">#979797</color>
+    <color name="warm_grey_three">#8b8b8b</color>
+    <color name="warm_grey_two">#9c9c9c</color>
+    <color name="red">#FA0C48</color>
+    <color name="green">#1ACA1A</color>
+
+    <color name="grad_start_dark">#141E30</color>
+    <color name="grad_end_light">#243B55</color>
+    <color name="grad_dusk_start">#2C3E50</color>
+    <color name="grad_dusk_end">#FD746C</color>
+
+
+
+
+    <color name="faded">#F3F1F1</color>
+    <color name="dark_faded">#ACABAB</color>
+    <color name="faded_white">#EEEEEE</color>
+    <item name="grey_faded" type="color">#C3C5C5</item>
+    <color name="background">#dddddd</color>
+</resources>

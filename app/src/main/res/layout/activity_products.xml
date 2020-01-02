@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".activities.ProductsActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/faded_white">
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/faded_white">
+
+    </FrameLayout>
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:id="@+id/searchBar"
+        style="@style/MaterialSearchBarLight"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:mt_navIconEnabled="true"
+        app:mt_speechMode="false"
+        app:mt_hint="@string/search_product"
+        app:mt_placeholder="@string/search_product" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/seven"
+        android:layout_below="@+id/searchBar"
+        android:orientation="vertical"
+        app:duration="800">
+
+        <!-- Adding 7 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchBar"
+        android:layout_marginTop="@dimen/seven"
+        android:layout_above="@+id/bottom_section"
+        android:clipToPadding="false"/>
+    <LinearLayout
+        android:id="@+id/no_data_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchBar"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cloud_off_black_24dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/red"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="@dimen/eighteen"
+            android:text="@string/no_data"/>
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        android:layout_alignParentBottom="true"
+        android:theme="@style/Bottom_Navigation"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/product_nav_menu" />
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/app_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/logo"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/twenty"
+            android:orientation="vertical">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/twenty"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:text="@string/otp_verification"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top">
+        <TextView
+            android:id="@+id/verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/asap_italic"
+            android:textColor="@color/red"
+            android:layout_marginTop="@dimen/fifty"
+            android:layout_marginLeft="@dimen/twenty"
+            android:text="@string/unauthorised"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/eighty"
+            android:orientation="vertical">
+
+            <com.techcamino.mlm.yboseller.util.PinEntryEditText
+                android:id="@+id/otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/twenty"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:cursorVisible="false"
+                android:digits="1234567890"
+                android:inputType="number"
+                android:maxLength="6"
+                android:imeOptions="actionDone"
+                android:textIsSelectable="false"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+
+                    android:id="@+id/buttonContinue"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/thirty"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginBottom="@dimen/twenty"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/blue_light">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/otp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/activity_horizontal_margin"
+                        android:textSize="@dimen/text_italic"/>
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <RelativeLayout
+                    android:id="@+id/resend_lbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/yellow_dark"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="@dimen/ten"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/resend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/resend_otp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:drawableEnd="@drawable/ic_refresh_black_24dp"
+                        android:drawableRight="@drawable/ic_refresh_black_24dp"
+                        android:drawablePadding="@dimen/radius"
+                        android:textSize="@dimen/activity_horizontal_margin"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/arrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/top"
+        >
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:rotation="180"
+            android:background="@drawable/arrow" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+

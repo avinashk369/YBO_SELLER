@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".activities.ShopActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/faded_white">
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/faded_white">
+
+    </FrameLayout>
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:id="@+id/searchBar"
+        style="@style/MaterialSearchBarLight"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:mt_navIconEnabled="true"
+        app:mt_speechMode="false"
+        app:mt_hint="@string/search_shop"
+        app:mt_placeholder="@string/search_shop" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/seven"
+        android:layout_below="@+id/searchBar"
+        android:orientation="vertical"
+        app:duration="800">
+
+        <!-- Adding 7 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+            <include layout="@layout/shop_placeholder_layout" />
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shop_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchBar"
+        android:layout_marginTop="@dimen/seven"
+        android:layout_above="@+id/bottom_section"
+        android:clipToPadding="false"/>
+</RelativeLayout>

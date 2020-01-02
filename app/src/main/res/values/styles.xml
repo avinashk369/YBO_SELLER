@@ -1,0 +1,122 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/black_overlay</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--<item name="android:closeIcon">@drawable/ic_vpn_key_black_24dp</item>
+        <item name="android:searchIcon">@drawable/ic_search_black_24dp</item>-->
+
+        <!-- Edit Text Floating hint-->
+        <item name="colorControlNormal">@color/grad_start_dark</item>
+        <item name="colorControlActivated">@color/black_overlay</item>
+        <item name="colorControlHighlight">@color/grey</item>
+        <!-- /Edit Text Floating hint-->
+
+    </style>
+
+    <style name="SpinnerTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Edit Text Floating hint-->
+        <item name="colorControlNormal">@color/yellow_dark</item>
+        <item name="colorControlActivated">@color/black_overlay</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <!-- /Edit Text Floating hint-->
+
+    </style>
+
+    <style name="Theme" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="Theme.SplashTheme" parent="Theme">
+        <item name="android:windowDisablePreview">true</item>
+        <!-- change colorprimarydark to reflect status bar color -->
+    </style>
+
+
+    <style name="Bottom_Navigation" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/grad_dusk_start</item>
+        <item name="android:textColorPrimary">@color/grey</item>
+        <item name="android:textColorSecondary">@color/dark_faded</item>
+    </style>
+
+
+    <style name="AppTheme.Mytoolbar" parent="@style/ThemeOverlay.AppCompat.Dark">
+
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+
+        <!-- change textColorPrimary to reflect toolbar text color -->
+        <item name="drawerArrowStyle">@style/DrawerIcon</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+    </style>
+
+    <!-- change drawerIcon to reflect drawer icon color -->
+    <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/black</item>
+    </style>
+
+    <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/black</item>
+    </style>
+
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="NavigationDrawer" parent="ThemeOverlay.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="colorControlActivated">@color/faded_white</item>
+        <item name="colorControlHighlight">@color/faded_white</item>
+    </style>
+
+    <style name="MyCheckbox" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:colorControlNormal">@color/black_overlay</item>
+        <item name="android:colorControlActivated">@color/blue_sky</item>
+        <item name="android:colorControlHighlight">@color/grad_dusk_start</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
+    </style>
+
+
+    <style name="MyCustomTheme" parent="MaterialSearchBarLight">
+        <item name="mt_searchBarColor">@color/searchBarPrimaryColor</item>
+        <item name="mt_dividerColor">@color/searchBarDividerColor</item>
+        <item name="mt_navIconTint">@color/searchBarNavIconTintColor</item>
+        <item name="mt_searchIconTint">@color/searchBarSearchIconTintColor</item>
+        <item name="mt_clearIconTint">@color/searchBarClearIconTintColor</item>
+        <item name="mt_menuIconTint">@color/searchBarMenuIconTintColor</item>
+        <item name="mt_backIconTint">@color/searchBarBackIconTintColor</item>
+        <item name="mt_textCursorTint">@color/searchBarCursorColor</item>
+        <item name="mt_textColor">@color/searchBarTextColor</item>
+        <item name="mt_hintColor">@color/searchBarHintColor</item>
+        <item name="mt_placeholderColor">@color/searchBarPlaceholderColor</item>
+        <item name="mt_highlightedTextColor">@color/searchBarTextHighlightColor</item>
+    </style>
+
+
+    <style name="bottom_sheet_item">
+        <item name="android:textSize">@dimen/activity_horizontal_margin</item>
+        <item name="android:drawablePadding">@dimen/twenty</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/activity_horizontal_margin</item>
+    </style>
+
+</resources>

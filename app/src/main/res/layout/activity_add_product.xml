@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".activities.AddProduct">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/twenty"
+        android:layout_above="@+id/bottom_section">
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/verify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/asap_italic"
+                android:textColor="@color/red"
+                android:layout_marginLeft="@dimen/twenty"
+                android:text="@string/unauthorised"
+                android:visibility="gone"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/thirty"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/access_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/thirty"
+                    android:layout_margin="@dimen/ten"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <Spinner
+                        android:id="@+id/product_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:backgroundTint="@color/grad_dusk_start"
+                        android:layout_margin="@dimen/twelve"/>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/thirty"
+                    android:layout_margin="@dimen/ten"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/eighteen"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_shopping_basket_black_24dp"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_marginRight="@dimen/ten"
+                            android:background="@color/black_overlay"/>
+                        <EditText
+                            android:id="@+id/product_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColorHint="@color/black_overlay"
+                            android:textColor="@color/black_overlay"
+                            android:hint="@string/product_name"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:inputType="text"
+                            android:background="@null"/>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/thirty"
+                    android:layout_margin="@dimen/ten"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/eighteen"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_attach_money_black_24dp"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_marginRight="@dimen/ten"
+                            android:background="@color/black_overlay"/>
+                        <EditText
+                            android:id="@+id/product_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColorHint="@color/black_overlay"
+                            android:textColor="@color/black_overlay"
+                            android:hint="@string/product_price"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:inputType="text"
+                            android:background="@null"/>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/thirty"
+                    android:layout_margin="@dimen/ten"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/eighteen"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_confirmation_number_black_24dp"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_marginRight="@dimen/ten"
+                            android:background="@color/black_overlay"/>
+                        <EditText
+                            android:id="@+id/product_qty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColorHint="@color/black_overlay"
+                            android:textColor="@color/black_overlay"
+                            android:hint="@string/product_qty"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:inputType="text"
+                            android:background="@null"/>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/file_layoutt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/thirty"
+                    android:layout_margin="@dimen/ten"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/eighteen"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_attach_file_black_24dp"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_marginRight="@dimen/ten"
+                            android:background="@color/black_overlay"/>
+                        <TextView
+                            android:id="@+id/product_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/upload_image"
+                            android:textColor="@color/black_overlay"
+                            android:fontFamily="@font/asap_italic"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textSize="@dimen/activity_horizontal_margin"/>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/buttonSubmit"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/thirty"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginBottom="@dimen/twelve"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/blue_light">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:textSize="@dimen/text_italic"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

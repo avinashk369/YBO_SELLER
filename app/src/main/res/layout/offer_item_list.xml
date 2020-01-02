@@ -1,0 +1,69 @@
+<androidx.cardview.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    card_view:cardCornerRadius="7dp"
+    android:layout_marginTop="7dp"
+    android:layout_marginBottom="7dp"
+    android:layout_marginEnd="3dp"
+    android:layout_marginStart="3dp"
+    card_view:cardElevation="7dp">
+
+    <ImageView
+        android:id="@+id/offer_image"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_horizontal"
+        android:elevation="4dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/card_background">
+        <LinearLayout
+            android:gravity="bottom"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/ten"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/faded_white"
+                android:textSize="@dimen/thirty"
+                android:gravity="center"
+                android:text="@string/app_name"/>
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:textColor="@color/faded_white"
+                android:hint="@string/shop_name"
+                android:gravity="center"
+                android:fontFamily="@font/asap_italic" />
+        </LinearLayout>
+        <TextView
+            android:gravity="center"
+            android:id="@+id/offer"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/ten"
+            android:hint="25%"
+            android:textSize="@dimen/twenty_five"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_bold"
+            />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
