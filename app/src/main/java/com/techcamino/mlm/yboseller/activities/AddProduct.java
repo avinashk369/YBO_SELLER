@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -19,6 +20,7 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.Gson;
 import com.techcamino.mlm.yboseller.R;
 import com.techcamino.mlm.yboseller.adapter.CategoryAdapter;
@@ -51,6 +53,7 @@ public class AddProduct extends AppCompatActivity implements AdapterView.OnItemS
     private Spinner categorySpinner;
     private CardView buttonSubmit;
     private HashMap<String,String> dataMap;
+    private HashMap<String,String> messageMap;
     private EditText productName,productPrice,productQty;
     private UserDetails userDetails;
 
@@ -79,6 +82,7 @@ public class AddProduct extends AppCompatActivity implements AdapterView.OnItemS
         productPrice = findViewById(R.id.product_price);
         productQty = findViewById(R.id.product_qty);
         dataMap = new HashMap<>();
+        messageMap = new HashMap<>();
         userDetails = new UserDetails();
         categorySpinner.setOnItemSelectedListener(this);
         buttonSubmit.setOnClickListener(this);
@@ -94,6 +98,24 @@ public class AddProduct extends AppCompatActivity implements AdapterView.OnItemS
             userDetails = (UserDetails) getIntent().getSerializableExtra(Constants.USER_DETAIL);
     }
 
+
+    private void showBottomSheet(HashMap<String, String> messageMap){
+        View dialogView = getLayoutInflater().inflate(R.layout.product_image_bottom, null);
+        final BottomSheetDialog dialog = new BottomSheetDialog(context);
+        dialog.setCancelable(false);
+        dialog.setContentView(dialogView);
+        dialog.show();
+        TextView productMessage = dialog.findViewById(R.id.product_message);
+        productMessage.setText(messageMap.get(Constants.DIALOG_MESSAGE));
+        RelativeLayout productImage = dialog.findViewById(R.id.bottom_section);
+        productImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AddProduct.this,ProductImage.class));
+                dialog.dismiss();
+            }
+        });
+    }
     public void getCategoryList(){
         dialog.show();
         Call<ArrayList<CategoryDetails>> call = apiService.getCategory();
@@ -186,6 +208,8 @@ public class AddProduct extends AppCompatActivity implements AdapterView.OnItemS
                     ProductDetails productDetails = new ProductDetails();
                     productDetails = response.body();
                     Log.d("Product",productDetails.getProductName());
+                    messageMap.put(Constants.DIALOG_MESSAGE,Constants.PRODUCT_ADDED);
+                    showBottomSheet(messageMap);
 
                 } else {
                     try {

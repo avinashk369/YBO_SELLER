@@ -33,6 +33,7 @@ public class Constants {
     public static final String PRODUCT_PRICE = "Product_Price";
     public static final String PRODUCT_QTY = "Product_QTY";
     public static final String PRODUCT_IMG = "Product_IMG";
+    public static final String PRODUCT_IMAGES = "Product Images";
     public static final String ACTIVE = "active";
     public static final String CREATED_BY = "created_by";
     public static final String CREATED_ON = "created_on";
@@ -52,5 +53,23 @@ public class Constants {
     public static final String SHOP_LOGO_IMAGE = "SellerLogoImage";
     public static final String UPLOAD_IMAGE = "Upload Image";
     public static final String COUNTRY_ID = "96";
+
+    public static final String DIALOG_MESSAGE = "Dialog message";
+    public static final String PRODUCT_ADDED = "Product added successfully";
+    public static final String PRODUCT_ERROR = "Product bot saved";
+
+    public static final String OWNER_ID = "owner_id";
+    public static final String FOLDER_NAME = "folder_name";
+    public static final String USER_ACCESS = "user_access";
+    public static final String STORE_ID = "store_id";
+    public static final String FILE_NAME = "file_name";
+    public static final String DOC_TYPE = "doc_type";
+
+    public static final String UPLOAD_IMAGE_ID = "ImageId";
+    public static final String UPLOAD_SELLER_ID = "sellerId";
+    public static final String PARENT_ID = "ParentId";
+    public static final String UPLOAD_IMAGE_TYPE = "ImageType";
+    public static final String UPLOAD_CREATED_BY = "createdBy";
+
 
 }

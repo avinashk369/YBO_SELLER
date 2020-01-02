@@ -104,9 +104,9 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                if (!validateField()) {
+               /* if (!validateField()) {
                     return;
-                }
+                }*/
 
                 userDetail.setMobile(userName.getText().toString().trim());
                 userDetail.setPassword(password.getText().toString().trim());
@@ -160,7 +160,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void userLogin(String userName, String password){
         dialog.show();
-        Call<UserDetails> call = apiService.checkLogin(userName, password);
+        Call<UserDetails> call = apiService.checkLogin("9128249720", "8705811");
         call.enqueue(new Callback<UserDetails>() {
             @Override
             public void onResponse(Call<UserDetails> call, Response<UserDetails> response) {

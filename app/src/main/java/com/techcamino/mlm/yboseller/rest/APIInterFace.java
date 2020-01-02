@@ -144,4 +144,7 @@ public interface APIInterFace {
     @GET("Authentication/GetCity/{sid}")
     Call<CityDetails> getCity(@Path("sid") String sid);
 
+    @POST("http://yboapi.codetrex.in/Seller/Authentication/UploadProductAndOfferImage")
+    Call<ResponseBody> uploadMultiFile(@Body RequestBody file);
+
 }

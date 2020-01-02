@@ -76,6 +76,7 @@
     <string name="upload">Upload</string>
     <string name="change_image">Change</string>
     <string name="pincode">Pincode</string>
+    <string name="add_image">Add Images</string>
 
     <string-array name="filter_items">
         <item>Category</item>

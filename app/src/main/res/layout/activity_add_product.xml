@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,12 +11,13 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar"/>
 
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
-        android:layout_marginTop="@dimen/twenty"
-        android:layout_above="@+id/bottom_section">
+        android:layout_marginTop="@dimen/eighty"
+        android:layout_above="@+id/bottom_frame">
         <RelativeLayout
             android:id="@+id/bottom"
             android:layout_width="match_parent"
@@ -222,32 +223,41 @@
         </RelativeLayout>
     </ScrollView>
 
-    <RelativeLayout
-        android:id="@+id/bottom_section"
+    <FrameLayout
+        android:id="@+id/bottom_frame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:gravity="center">
-        <androidx.cardview.widget.CardView
+        android:layout_gravity="bottom">
 
-            android:id="@+id/buttonSubmit"
-            android:layout_width="250dp"
+        <RelativeLayout
+            android:id="@+id/bottom_section"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="@dimen/thirty"
-            android:layout_marginTop="@dimen/ten"
-            android:layout_marginBottom="@dimen/twelve"
-            app:cardElevation="5dp"
-            app:cardBackgroundColor="@color/blue_light">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/submit"
-                android:textColor="@color/white"
-                android:fontFamily="@font/montserrat_regular"
-                android:gravity="center"
-                android:layout_margin="@dimen/activity_horizontal_margin"
-                android:textSize="@dimen/text_italic"/>
-        </androidx.cardview.widget.CardView>
-    </RelativeLayout>
-</RelativeLayout>
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/buttonSubmit"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/thirty"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/twelve"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/blue_light">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/submit"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_italic"/>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
